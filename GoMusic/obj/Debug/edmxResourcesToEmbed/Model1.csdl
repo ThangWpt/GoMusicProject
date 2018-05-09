@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBGoMusicModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BaiHat">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Song" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Singer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Songwriter" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="DBGoMusicEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BaiHats" EntityType="Self.BaiHat" />
+  </EntityContainer>
+</Schema>

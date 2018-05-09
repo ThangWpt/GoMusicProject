@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBGoMusicModelStoreContainer" CdmEntityContainer="DBGoMusicEntities">
+    <EntitySetMapping Name="BaiHats">
+      <EntityTypeMapping TypeName="DBGoMusicModel.BaiHat">
+        <MappingFragment StoreEntitySet="BaiHat">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Song" ColumnName="Song" />
+          <ScalarProperty Name="Singer" ColumnName="Singer" />
+          <ScalarProperty Name="Songwriter" ColumnName="Songwriter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
