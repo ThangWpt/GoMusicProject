@@ -16,7 +16,6 @@ namespace GoMusic.GoMusicForms
         {
             InitializeComponent();
         }
-
         private void DisplayForm_Load(object sender, EventArgs e)
         {
             this.ShowBaiHat();
@@ -37,7 +36,7 @@ namespace GoMusic.GoMusicForms
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-       
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -67,24 +66,9 @@ namespace GoMusic.GoMusicForms
 
         private void DisplayForm_DoubleClick(object sender, EventArgs e)
         {
-            //    if (this.lstSong.SelectedRows.Count == 1)
-            //    {
-            //        var row = this.lstSong.SelectedRows[0];
-            //        var item = (BaiHat)row.DataBoundItem;
 
-            //        var form = new FormEdit(item);
-            //        form.ShowDialog();
-            //        this.ShowBaiHat();
-            //    }
         }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            //DBGoMusicEntities db = new DBGoMusicEntities();
-            //string valuesToSearch = txtSearch.Text.ToString();
-            //lstSong.DataSource = db;
-           
-        }
+        
 
         private void lstSong_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -107,6 +91,37 @@ namespace GoMusic.GoMusicForms
             btnOpen.BackColor = Color.LightGray;
         }
 
+      
+
+
+        private void lstSong_DoubleClick(object sender, EventArgs e)
+        {
+            if (this.lstSong.SelectedRows.Count == 1)
+            {
+                var row = this.lstSong.SelectedRows[0];
+                var item = (BaiHat)row.DataBoundItem;
+
+                var form = new FormEdit(item);
+                form.ShowDialog();
+                this.ShowBaiHat();
+            }
+        }
+        BaiHat s = new BaiHat();
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+            DBGoMusicEntities db = new DBGoMusicEntities();
+            lstSong.DataSource = db.BaiHats.ToList().Where(s => s.Song.Contains(txtSearch.Text)).ToList();
+            //lstSong.DataSource = db.BaiHats.ToList().Where(s => s.Songwriter.Contains(txtSearch.Text)).ToList();
+
+        }
+
+        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnOpen_Click_1(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -120,6 +135,6 @@ namespace GoMusic.GoMusicForms
             }
         }
 
-       
+
     }
 }

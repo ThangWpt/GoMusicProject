@@ -14,9 +14,9 @@ namespace GoMusic.GoMusicForms
     {
         public FormEdit(BaiHat bh)
         {
-            //InitializeComponent();
-            //this.Load += new EventHandler(FormEdit_Load);
-            //this.btnSave_
+            InitializeComponent();
+            this.bh = bh;
+
         }
         private BaiHat bh;
 
