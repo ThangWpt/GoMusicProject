@@ -18,5 +18,6 @@ namespace GoMusic
         public string Song { get; set; }
         public string Singer { get; set; }
         public string Songwriter { get; set; }
+        public string Album { get; set; }
     }
 }

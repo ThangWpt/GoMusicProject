@@ -8,6 +8,7 @@
     <Property Name="Song" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Singer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Songwriter" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Album" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityContainer Name="DBGoMusicEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="BaiHats" EntityType="Self.BaiHat" />

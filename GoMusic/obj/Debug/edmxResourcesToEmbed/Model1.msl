@@ -8,6 +8,7 @@
           <ScalarProperty Name="Song" ColumnName="Song" />
           <ScalarProperty Name="Singer" ColumnName="Singer" />
           <ScalarProperty Name="Songwriter" ColumnName="Songwriter" />
+          <ScalarProperty Name="Album" ColumnName="Album" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

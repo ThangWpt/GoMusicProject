@@ -23,6 +23,7 @@ namespace GoMusic.GoMusicForms
             bh.Song = this.txtName.Text;
             bh.Singer = this.txtSinger.Text;
             bh.Songwriter = this.txtWriter.Text;
+            bh.Album = this.txtAlbum.Text;
             try
             {
                 var db = new DBGoMusicEntities();

@@ -13,6 +13,7 @@
           <Property Name="Song" Type="nvarchar" MaxLength="100" />
           <Property Name="Singer" Type="nvarchar" MaxLength="100" />
           <Property Name="Songwriter" Type="nvarchar" MaxLength="100" />
+          <Property Name="Album" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityContainer Name="DBGoMusicModelStoreContainer">
           <EntitySet Name="BaiHat" EntityType="Self.BaiHat" Schema="dbo" store:Type="Tables" />
@@ -30,6 +31,7 @@
           <Property Name="Song" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Singer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Songwriter" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Album" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="DBGoMusicEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="BaiHats" EntityType="Self.BaiHat" />
@@ -47,6 +49,7 @@
                 <ScalarProperty Name="Song" ColumnName="Song" />
                 <ScalarProperty Name="Singer" ColumnName="Singer" />
                 <ScalarProperty Name="Songwriter" ColumnName="Songwriter" />
+                <ScalarProperty Name="Album" ColumnName="Album" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="cb9577d7e1a2491c9fca9fc0630664a9" Name="Diagram1">
+      <Diagram DiagramId="c2eccf96285e4f959447faaee8e84162" Name="Diagram1">
         <EntityTypeShape EntityType="DBGoMusicModel.BaiHat" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>

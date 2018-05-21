@@ -25,6 +25,7 @@ namespace GoMusic.GoMusicForms
             this.txtName.Text = this.bh.Song;
             this.txtSinger.Text = this.bh.Singer;
             this.txtWriter.Text = this.bh.Songwriter;
+            this.txtAlbum.Text = this.bh.Album;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -36,6 +37,7 @@ namespace GoMusic.GoMusicForms
                 updatE.Song = this.txtName.Text;
                 updatE.Singer = this.txtSinger.Text;
                 updatE.Songwriter = this.txtWriter.Text;
+                updatE.Album = this.txtAlbum.Text;
                 db.Entry(updatE).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
                 this.Close();

@@ -42,7 +42,7 @@ namespace GoMusic.GoMusicForms
         private void btnDelete_Click(object sender, EventArgs e)
         {
             var db = new DBGoMusicEntities();
-            if (MessageBox.Show("Do you want to delete?", "Confirm", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+            if (MessageBox.Show("Do you want to delete this song?", "Confirm", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
             {
                 for (int i = 0; i < this.lstSong.SelectedRows.Count; i++)
                 {
@@ -112,8 +112,7 @@ namespace GoMusic.GoMusicForms
         {
 
             DBGoMusicEntities db = new DBGoMusicEntities();
-            lstSong.DataSource = db.BaiHats.ToList().Where(s => s.Song.Contains(txtSearch.Text)).ToList();
-            //lstSong.DataSource = db.BaiHats.ToList().Where(s => s.Songwriter.Contains(txtSearch.Text)).ToList();
+            lstSong.DataSource = db.BaiHats.ToList().Where(s => s.Song.ToLower().Contains(txtSearch.Text.ToLower().Trim())).ToList();
 
         }
 
@@ -133,8 +132,8 @@ namespace GoMusic.GoMusicForms
                     listBox1.Items.Add(files[i]);
                 }
             }
-        }
 
+        }
 
     }
 }
